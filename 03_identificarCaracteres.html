@@ -7,6 +7,31 @@
 
     //Entrada
 
+const palavra = prompt("Digite uma palavra:").toLowerCase();
+
+let vogais = 0;
+let consoantes = 0;
+
+function isVogal(caractere) {
+    return "aeiou".includes(caractere);
+}
+for (let i = 0; i < palavra.length; i++) {
+    const caractere = palavra[i];
+    if (/[a-z]/.test(caractere)) {
+        if (isVogal(caractere)) {
+            vogais++;
+        } else {
+            consoantes++;
+        }
+    }
+}
+
+// Apresenta as quantidades de vogais e consoantes
+document.write(`Quantidade de vogais: ${vogais}`);
+document.write(`Quantidade de consoantes: ${consoantes}`);
+
+
+
 
     //Processamento
 

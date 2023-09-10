@@ -8,7 +8,30 @@
     */
 
     //Entrada
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
 
+// Pergunta ao usuário quais cores ele gosta
+let coresPreferidas = [];
+while (true) {
+    let corPreferida = prompt("Qual cor você gosta? (Digite 'sair' para encerrar)").trim();
+    if (corPreferida.toLowerCase() === 'sair' || corPreferida === null || corPreferida === "") {
+        break;
+    }
+    
+    // Verifica se a cor existe na lista
+    if (cores.includes(corPreferida)) {
+        coresPreferidas.push(corPreferida);
+    } else {
+        alert("Essa cor não está na lista. Por favor, escolha uma cor da lista.");
+    }
+}
+
+// Apresenta as cores preferidas e a quantidade de cores que o usuário gosta
+if (coresPreferidas.length > 0) {
+    alert("Cores preferidas: " + coresPreferidas.join(", "));
+    alert("Quantidade de cores que o usuário gosta: " + coresPreferidas.length);
+} else {
+    alert("O usuário não selecionou nenhuma cor preferida.");}
 
     //Processamento
 

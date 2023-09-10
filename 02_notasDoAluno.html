@@ -7,7 +7,20 @@
     */
 
     //Entrada
+    const notasAluno = [7, 5, 9, 8];
 
+
+const maiorNota = Math.max(...notasAluno);
+
+
+const menorNota = Math.min(...notasAluno);
+
+const somaNotas = notasAluno.reduce((total, nota) => total + nota, 0);
+const media = somaNotas / notasAluno.length;
+
+document.write("Maior nota:", maiorNota);
+document.write("Menor nota:", menorNota);
+document.write("Média das notas:", media);
 
     //Processamento
 

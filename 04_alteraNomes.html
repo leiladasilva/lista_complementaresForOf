@@ -8,6 +8,22 @@
     */
 
     //Entrada
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+
+    function removerAcentos(texto) {
+        const comAcento = "áàãâéèêíìóòõôúùû";
+        const semAcento = "aaaaeeeiiioooouuu";
+    
+        return texto.replace(/[áàãâéèêíìóòõôúùû]/g, function (match) {
+            return semAcento.charAt(comAcento.indexOf(match));
+        });
+    }
+    
+    for (let i = 0; i < nomes.length; i++) {
+        nomes[i] = removerAcentos(nomes[i]);
+    }
+    
+    document.write(nomes);
 
 
     //Processamento

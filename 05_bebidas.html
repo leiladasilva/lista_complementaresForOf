@@ -7,6 +7,30 @@
     */
 
     //Entrada
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+
+
+    let bebidasNaoAlcoolicas = [];
+    
+    
+    function temAlcool(bebida) {
+        const bebidasComAlcool = ["Cerveja", "Vinho", "Tequila", "Vodka"];
+        return bebidasComAlcool.includes(bebida);
+    }
+    
+
+    for (let i = 0; i < bebidas.length; i++) {
+        const bebida = bebidas[i];
+        const resposta = prompt(`A bebida "${bebida}" possui álcool? (Sim/Não)`).toLowerCase();
+        
+        if (resposta === "não" || resposta === "nao") {
+            bebidasNaoAlcoolicas.push(bebida);
+        }
+    }
+    
+    
+    document.write("Bebidas permitidas para menores de 18 anos:");
+    document.write(bebidasNaoAllicascoo);
 
 
     //Processamento

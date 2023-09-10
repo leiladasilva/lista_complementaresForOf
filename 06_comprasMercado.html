@@ -10,6 +10,21 @@
 
 
     //Processamento
+    let lista = ["A", "E", 2, 4.8, "CINQUENTA", "Araquari", 80, 10, 3.2];
+
+    // Inicializa uma variável para armazenar a soma
+    let soma = 0;
+    
+    // Itera pelos elementos da lista
+    for (let i = 0; i < lista.length; i++) {
+        // Verifica se o elemento é um número
+        if (typeof lista[i] === `number`) {
+            soma += lista[i];
+        }
+    }
+    
+    // Apresenta o resultado da soma
+    document.write("A soma dos numeros na lista é: " + soma);
 
 
     //Saída

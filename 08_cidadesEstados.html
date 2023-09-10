@@ -8,6 +8,38 @@
     */
 
     //Entrada
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+
+    // Objeto para armazenar as cidades por estado
+    let cidadesPorEstado = {};
+    
+    // Pergunta ao usuário a qual estado pertence cada cidade
+    for (let i = 0; i < cidades.length; i++) {
+        let cidade = cidades[i];
+        let estado = prompt(`A cidade "${cidade}" pertence a qual estado?`);
+        
+        // Garante que o estado esteja em letras maiúsculas para evitar duplicatas
+        estado = estado.toUpperCase();
+        
+        // Adiciona a cidade à lista do estado correspondente
+        if (cidadesPorEstado[estado]) {
+            cidadesPorEstado[estado].push(cidade);
+        } else {
+            cidadesPorEstado[estado] = [cidade];
+        }
+    }
+    
+    // Ordena as listas de cidades por estado em ordem decrescente pela quantidade de cidades
+    let estadosOrdenados = Object.keys(cidadesPorEstado).sort((a, b) => cidadesPorEstado[b].length - cidadesPorEstado[a].length);
+    
+    // Apresenta os estados com suas respectivas cidades
+    for (let i = 0; i < estadosOrdenados.length; i++) {
+        let estado = estadosOrdenados[i];
+        let cidadesDoEstado = cidadesPorEstado[estado];}
+        
+    document.write(`Estado: ${estado}`);
+        document.write(`Cidades: ${cidadesDoEstado.join(", ")}`);
+        document.write();
 
 
     //Processamento
