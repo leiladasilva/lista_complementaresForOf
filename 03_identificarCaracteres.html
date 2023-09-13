@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //Problema: Identificar Caracteres
     /*
@@ -6,11 +7,20 @@
     */
 
     //Entrada
-
+    const p = prompt(`informe uma palavra`).trim().toLowerCase();
 
     //Processamento
-
+    let vogais = 0;
+    let consoantes = 0;
+    for (const letra of p) {
+        if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+            vogais = vogais + 1; //vogais++;
+        }
+        else {
+            consoantes = consoantes + 1; //consoantes++;
+        }
+    }
 
     //Saída
-
+    document.write(`A quantidade de vogais é ${vogais} e a quantidade de consoantes é ${consoantes}.`);
 </script>

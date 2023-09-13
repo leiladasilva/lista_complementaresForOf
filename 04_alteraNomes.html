@@ -8,9 +8,15 @@
     */
 
     //Entrada
-
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+let n =[];
 
     //Processamento
+    for(let nome of nomes ){
+        if(nome.search("á") > 0 || nome.search("é") > 0 || nome.search("í") > 0 || nome.search("ó") > 0 || nome.search("ú") > 0) {
+            document.write(`${nome}<br>`)
+        }
+    }
 
 
     //Saída
