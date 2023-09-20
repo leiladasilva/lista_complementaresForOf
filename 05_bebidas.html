@@ -7,11 +7,38 @@
     */
 
     //Entrada
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
 
 
-    //Processamento
+    
+const idade = Number(prompt("Qual é a sua idade?"));
+const bebidasPermitidas = [];
+
+//Processamento
+for (const bebida of bebidas) {
+  const bebidaLowerCase = bebida.toLowerCase();
+
+  if (
+    bebidaLowerCase === "água" ||
+    bebidaLowerCase === "suco natural" ||
+    bebidaLowerCase === "refrigerante" ||
+    idade >= 18
+  ) {
+    bebidasPermitidas.push(bebida);
+  }
+}
+
+//Saída
+if (bebidasPermitidas.length === 0) {
+  document.write("Você não pode consumir nenhuma das bebidas disponíveis.");
+} else {
+  document.write("Bebidas permitidas para você:");
+  for (const bebida of bebidasPermitidas) {
+    document.write(bebida);
+  }
+}
 
 
-    //Saída
+    
 
 </script>

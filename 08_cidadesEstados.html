@@ -8,6 +8,39 @@
     */
 
     //Entrada
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+
+
+let estados = {};
+
+
+for (const cidade of cidades) {
+  const estado = prompt(`A cidade ${cidade} pertence a qual estado?`);
+  
+  
+  if (!estados[estado]) {
+    estados[estado] = [];
+  }
+  
+  estados[estado].push(cidade);
+}
+
+
+let estadosArray = [];
+for (const estado in estados) {
+  estadosArray.push({ nome: estado, cidades: estados[estado] });
+}
+
+
+estadosArray.sort((a, b) => b.cidades.length - a.cidades.length);
+
+
+for (const estadoObj of estadosArray) {
+  const estado = estadoObj.nome;
+  const cidadesDoEstado = estadoObj.cidades;
+  document.write(`Estado: ${estado}`);
+  document.write(`Cidades: ${cidadesDoEstado.join(', ')}`);
+}
 
 
     //Processamento

@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //Problema: Cor Preferida
     /*
@@ -8,11 +9,35 @@
     */
 
     //Entrada
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+const coresGostadas = prompt("Digite as cores que você gosta, separadas por vírgula (ex: Azul, Verde, Vermelho):");
+
+const coresGostadasArray = coresGostadas.split(",").map(cor => cor.trim());
+
+let quantidadeCoresPreferidas = 0;
+const coresPreferidas = [];
+
+for (const cor of coresGostadasArray) {
+  if (cores.includes(cor)) {
+    quantidadeCoresPreferidas++;
+    coresPreferidas.push(cor);
+  }
+}
+
+if (quantidadeCoresPreferidas === 0) {
+  document.write("Você não gosta de nenhuma das cores da lista.");
+} else {
+  document.write("Cores preferidas:<br>"); 
+  for (const cor of coresPreferidas) {
+    document.write(cor + "<br>");
+  }
+  document.write(`Quantidade de cores preferidas: ${quantidadeCoresPreferidas}`);
+}
 
 
-    //Processamento
+    
 
 
-    //Saída
+   
 
 </script>
